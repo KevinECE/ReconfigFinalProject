@@ -1,0 +1,818 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Dec  3 21:05:40 2021
+# Process ID: 12728
+# Current directory: C:/RECONFIG/Final_Project/Final_Project/Final_Project.runs/design_1_accelerator_0_0_synth_1
+# Command line: vivado.exe -log design_1_accelerator_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_accelerator_0_0.tcl
+# Log file: C:/RECONFIG/Final_Project/Final_Project/Final_Project.runs/design_1_accelerator_0_0_synth_1/design_1_accelerator_0_0.vds
+# Journal file: C:/RECONFIG/Final_Project/Final_Project/Final_Project.runs/design_1_accelerator_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_accelerator_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/RECONFIG/Final_Project/provided_code/dram_test'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+Command: synth_design -top design_1_accelerator_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16324
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1129.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_accelerator_0_0' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ip/design_1_accelerator_0_0/synth/design_1_accelerator_0_0.vhd:86]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'accelerator_v1_0' declared at 'c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/hdl/accelerator_v1_0.vhd:5' bound to instance 'U0' of component 'accelerator_v1_0' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ip/design_1_accelerator_0_0/synth/design_1_accelerator_0_0.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'accelerator_v1_0' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/hdl/accelerator_v1_0.vhd:52]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'accelerator_v1_0_S00_AXI' declared at 'c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/hdl/accelerator_v1_0_S00_AXI.vhd:13' bound to instance 'accelerator_v1_0_S00_AXI_inst' of component 'accelerator_v1_0_S00_AXI' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/hdl/accelerator_v1_0.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'accelerator_v1_0_S00_AXI' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/hdl/accelerator_v1_0_S00_AXI.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'wrapper' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/wrapper.vhd:26]
+INFO: [Synth 8-638] synthesizing module 'user_app' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/user_app.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'memory_map' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/memory_map.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'memory_map' (1#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/memory_map.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'ctrl' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/ctrl.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'ctrl' (2#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/ctrl.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'user_app' (3#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/user_app.vhd:66]
+INFO: [Synth 8-637] synthesizing blackbox instance 'U_DRAM0_RD' of component 'dram_rd_ram0' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/wrapper.vhd:242]
+INFO: [Synth 8-637] synthesizing blackbox instance 'U_DRAM0_WR' of component 'dram_wr_ram0' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/wrapper.vhd:267]
+INFO: [Synth 8-637] synthesizing blackbox instance 'U_DRAM1_RD' of component 'dram_rd_ram1' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/wrapper.vhd:290]
+INFO: [Synth 8-637] synthesizing blackbox instance 'U_DRAM1_WR' of component 'dram_wr_ram1' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/wrapper.vhd:315]
+INFO: [Synth 8-638] synthesizing module 'dram_model' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/dram_model.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'ram_sync_read' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/ram.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 'ram_sync_read' (4#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/ram.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'delay' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/delay.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'delay' (5#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/delay.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized0' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/delay.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized0' (5#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/delay.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized1' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/delay.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized1' (5#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/delay.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'dram_model' (6#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/dram_model.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'dram_model__parameterized0' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/dram_model.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized2' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/delay.vhd:40]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/delay.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized2' (6#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/delay.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized3' [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/delay.vhd:40]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/delay.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized3' (6#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/delay.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'dram_model__parameterized0' (6#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/dram_model.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'wrapper' (7#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/src/wrapper.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'accelerator_v1_0_S00_AXI' (8#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/hdl/accelerator_v1_0_S00_AXI.vhd:97]
+INFO: [Synth 8-256] done synthesizing module 'accelerator_v1_0' (9#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ipshared/b76c/hdl/accelerator_v1_0.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'design_1_accelerator_0_0' (10#1) [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ip/design_1_accelerator_0_0/synth/design_1_accelerator_0_0.vhd:86]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1129.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1129.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1129.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 1129.355 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1196.988 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1196.988 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ctrl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                s_wait_0 |                              001 |                               00
+                s_wait_1 |                              010 |                               01
+             s_wait_done |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'ctrl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 14    
+	               20 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 4     
+	               15 Bit    Registers := 6     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 25    
++---RAMs : 
+	            1024K Bit	(32768 X 32 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 4     
+	   2 Input   18 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 4     
+	   8 Input   16 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 4     
+	   8 Input   15 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 13    
+	   8 Input    1 Bit        Muxes := 7     
+	   3 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-------------------------+----------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object                                                           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+----------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|design_1_accelerator_0_0 | U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg | 32 K x 32(READ_FIRST)  | W |   | 32 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
+|design_1_accelerator_0_0 | U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg | 32 K x 32(READ_FIRST)  | W |   | 32 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
++-------------------------+----------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-------------------------+----------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object                                                           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+----------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|design_1_accelerator_0_0 | U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg | 32 K x 32(READ_FIRST)  | W |   | 32 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
+|design_1_accelerator_0_0 | U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg | 32 K x 32(READ_FIRST)  | W |   | 32 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
++-------------------------+----------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_BRAM/memory_reg_0_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1/U_BRAM/memory_reg_0_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:54 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------------------+-----------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name              | RTL Name                                                                                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------------------+-----------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|design_1_accelerator_0_0 | U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_RD_DELAY/U_CYCLES_GT_0.regs_reg[8][31]   | 9      | 32    | YES          | NO                 | YES               | 32     | 0       | 
+|design_1_accelerator_0_0 | U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0/U_VALID_DELAY/U_CYCLES_GT_0.regs_reg[8][0] | 10     | 1     | YES          | NO                 | YES               | 1      | 0       | 
++-------------------------+-----------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |dram_rd_ram0  |         1|
+|2     |dram_wr_ram0  |         1|
+|3     |dram_rd_ram1  |         1|
+|4     |dram_wr_ram1  |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------------+------+
+|      |Cell              |Count |
++------+------------------+------+
+|1     |dram_rd_ram0_bbox |     1|
+|2     |dram_rd_ram1_bbox |     1|
+|3     |dram_wr_ram0_bbox |     1|
+|4     |dram_wr_ram1_bbox |     1|
+|5     |CARRY4            |     2|
+|6     |LUT1              |     1|
+|7     |LUT2              |    39|
+|8     |LUT3              |     6|
+|9     |LUT4              |    25|
+|10    |LUT5              |    59|
+|11    |LUT6              |   109|
+|12    |RAMB36E1          |    64|
+|13    |SRL16E            |    33|
+|14    |FDCE              |   289|
+|15    |FDPE              |    17|
+|16    |FDRE              |    88|
++------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 1196.988 ; gain = 67.633
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:55 . Memory (MB): peak = 1196.988 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 1196.988 ; gain = 67.633
+INFO: [Project 1-571] Translating synthesized netlist
+Parsing EDIF File [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ip/design_1_accelerator_0_0/src/dram_cores/dram_rd_ram0.edn]
+Finished Parsing EDIF File [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ip/design_1_accelerator_0_0/src/dram_cores/dram_rd_ram0.edn]
+Parsing EDIF File [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ip/design_1_accelerator_0_0/src/dram_cores/dram_wr_ram0.edn]
+Finished Parsing EDIF File [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ip/design_1_accelerator_0_0/src/dram_cores/dram_wr_ram0.edn]
+Parsing EDIF File [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ip/design_1_accelerator_0_0/src/dram_cores/dram_rd_ram1.edn]
+Finished Parsing EDIF File [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ip/design_1_accelerator_0_0/src/dram_cores/dram_rd_ram1.edn]
+Parsing EDIF File [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ip/design_1_accelerator_0_0/src/dram_cores/dram_wr_ram1.edn]
+Finished Parsing EDIF File [c:/RECONFIG/Final_Project/Final_Project/Final_Project.gen/sources_1/bd/design_1/ip/design_1_accelerator_0_0/src/dram_cores/dram_wr_ram1.edn]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.103 . Memory (MB): peak = 1196.988 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 118 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/clear_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[0]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[10]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[11]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[12]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[13]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[14]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[15]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[16]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[17]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[18]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[19]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[20]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[21]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[22]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[23]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[24]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[25]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[26]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[27]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[28]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[29]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[30]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[31]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[3]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[4]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[5]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[6]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[7]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[8]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_data_IBUF[9]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_valid_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_ready_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/go_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/rd_en_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/rst_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[0]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[10]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[11]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[12]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[13]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[14]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[15]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[16]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[3]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[4]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[5]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[6]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[7]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[8]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/size_IBUF[9]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/stall_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[0]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[10]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[11]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[12]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[13]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[14]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[3]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[4]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[5]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[6]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[7]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[8]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/start_addr_IBUF[9]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/clear_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[0]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[10]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[11]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[12]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[13]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[14]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[15]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[16]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[17]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[18]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[19]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[20]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[21]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[22]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[23]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[24]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[25]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[26]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[27]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[28]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[29]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[30]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[31]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[3]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[4]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/data_IBUF[5]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+INFO: [Common 17-14] Message 'Opt 31-32' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/valid_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[0]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[10]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[11]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[12]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[13]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[14]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[15]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[1]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[2]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[3]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[4]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[5]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[6]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[7]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[8]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/data_OBUF[9]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/done_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[0]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[10]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[11]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[12]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[13]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[14]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[1]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[2]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[3]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[4]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[5]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[6]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[7]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[8]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_addr_OBUF[9]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_en_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_rd_flush_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[11]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[12]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[13]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[14]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[15]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[16]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[17]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[18]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[19]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[1]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[20]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[21]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[22]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[23]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[24]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[25]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[26]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[27]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[28]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[29]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[2]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[30]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[31]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[3]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[4]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[5]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[6]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[7]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[8]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[9]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_en_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/done_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/ready_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[0]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[10]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[11]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[12]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[13]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[14]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[1]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[2]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[3]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[4]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[5]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[6]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[7]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[8]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_addr_OBUF[9]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[0]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_wr_data_OBUF[10]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/valid_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[0]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[10]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[11]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[12]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[13]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[14]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[15]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[16]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[17]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[18]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[19]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[1]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[20]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/data_OBUF[21]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+INFO: [Common 17-14] Message 'Opt 31-33' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Shape Builder 18-119] Failed to create I/OLOGIC Route Through shape for instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_clk_IBUF_inst. Found overlapping instances within the shape: U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_clk_IBUF_inst and U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/dram_clk_IBUF_inst.
+CRITICAL WARNING: [Shape Builder 18-119] Failed to create I/OLOGIC Route Through shape for instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/user_clk_IBUF_inst. Found overlapping instances within the shape: U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/user_clk_IBUF_inst and U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_WR/user_clk_IBUF_inst.
+CRITICAL WARNING: [Shape Builder 18-119] Failed to create I/OLOGIC Route Through shape for instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/dram_clk_IBUF_inst. Found overlapping instances within the shape: U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_clk_IBUF_inst and U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/dram_clk_IBUF_inst.
+CRITICAL WARNING: [Shape Builder 18-119] Failed to create I/OLOGIC Route Through shape for instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/user_clk_IBUF_inst. Found overlapping instances within the shape: U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/user_clk_IBUF_inst and U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_RD/user_clk_IBUF_inst.
+CRITICAL WARNING: [Shape Builder 18-119] Failed to create I/OLOGIC Route Through shape for instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_WR/dram_clk_IBUF_inst. Found overlapping instances within the shape: U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/dram_clk_IBUF_inst and U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_WR/dram_clk_IBUF_inst.
+CRITICAL WARNING: [Shape Builder 18-119] Failed to create I/OLOGIC Route Through shape for instance U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_WR/user_clk_IBUF_inst. Found overlapping instances within the shape: U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM0_RD/user_clk_IBUF_inst and U0/accelerator_v1_0_S00_AXI_inst/U_WRAPPER/U_DRAM1_WR/user_clk_IBUF_inst.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1222.227 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: ba9c4f92
+INFO: [Common 17-83] Releasing license: Synthesis
+122 Infos, 202 Warnings, 6 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:14 . Memory (MB): peak = 1222.227 ; gain = 92.871
+INFO: [Common 17-1381] The checkpoint 'C:/RECONFIG/Final_Project/Final_Project/Final_Project.runs/design_1_accelerator_0_0_synth_1/design_1_accelerator_0_0.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 79 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/RECONFIG/Final_Project/Final_Project/Final_Project.runs/design_1_accelerator_0_0_synth_1/design_1_accelerator_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_accelerator_0_0_utilization_synth.rpt -pb design_1_accelerator_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  3 21:07:14 2021...
